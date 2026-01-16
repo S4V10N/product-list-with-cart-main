@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="dist/styles.css" />
+        <title>Frontend Mentor | Product list with cart</title>
+    </head>
+    <body>
+        <header>
+            <h1><strong>Desserts</strong></h1>
+        </header>
+
+        <main>
+            <section class="products">
+                <div id="box" class="box">
+                    <div>
+                        <img
+                            src="assets/images/image-waffle-mobile.jpg"
+                            alt="alt-text"
+                        />
+                        <button class="cart">
+                            <img
+                                src="assets/images/icon-add-to-cart.svg"
+                                alt="cart-icon"
+                            />
+                            Add to Cart
+                        </button>
+                        <button class="order-qty">
+                            <div>
+                                <img
+                                    src="assets/images/icon-increment-quantity.svg"
+                                    alt="add-item-to-cart-btn"
+                                    id="add-item"
+                                />
+                            </div>
+                            <p id="number-of-items">4</p>
+                            <div>
+                                <img
+                                    src="assets/images/icon-decrement-quantity.svg"
+                                    alt="remove-item-from-cart-btn"
+                                    id="remove-item"
+                                />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="desc">
+                        <p id="category" class="category">Waffle</p>
+                        <p id="product" class="product">
+                            <strong>Waffle with Berries</strong>
+                        </p>
+                        <p id="price" class="price">6.50</p>
+                    </div>
+                </div>
+                <div id="box" class="box">
+                    <div>
+                        <img
+                            src="assets/images/image-waffle-mobile.jpg"
+                            alt="alt-text"
+                        />
+                        <button class="cart">
+                            <img
+                                src="assets/images/icon-add-to-cart.svg"
+                                alt="cart-icon"
+                            />
+                            Add to Cart
+                        </button>
+                        <button class="order-qty">
+                            <div>
+                                <img
+                                    src="assets/images/icon-increment-quantity.svg"
+                                    alt="add-item-to-cart-btn"
+                                    id="add-item"
+                                />
+                            </div>
+                            <p id="number-of-items">4</p>
+                            <div>
+                                <img
+                                    src="assets/images/icon-decrement-quantity.svg"
+                                    alt="remove-item-from-cart-btn"
+                                    id="remove-item"
+                                />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="desc">
+                        <p id="category" class="category">Waffle</p>
+                        <p id="product" class="product">
+                            <strong>Waffle with Berries</strong>
+                        </p>
+                        <p id="price" class="price">6.50</p>
+                    </div>
+                </div>
+                <div id="box" class="box">
+                    <div>
+                        <img
+                            src="assets/images/image-waffle-mobile.jpg"
+                            alt="alt-text"
+                        />
+                        <button class="cart">
+                            <img
+                                src="assets/images/icon-add-to-cart.svg"
+                                alt="cart-icon"
+                            />
+                            Add to Cart
+                        </button>
+                        <button class="order-qty">
+                            <div>
+                                <img
+                                    src="assets/images/icon-increment-quantity.svg"
+                                    alt="add-item-to-cart-btn"
+                                    id="add-item"
+                                />
+                            </div>
+                            <p id="number-of-items">4</p>
+                            <div>
+                                <img
+                                    src="assets/images/icon-decrement-quantity.svg"
+                                    alt="remove-item-from-cart-btn"
+                                    id="remove-item"
+                                />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="desc">
+                        <p id="category" class="category">Waffle</p>
+                        <p id="product" class="product">
+                            <strong>Waffle with Berries</strong>
+                        </p>
+                        <p id="price" class="price">6.50</p>
+                    </div>
+                </div>
+                <div id="box" class="box">
+                    <div>
+                        <img
+                            src="assets/images/image-waffle-mobile.jpg"
+                            alt="alt-text"
+                        />
+                        <button class="cart">
+                            <img
+                                src="assets/images/icon-add-to-cart.svg"
+                                alt="cart-icon"
+                            />
+                            Add to Cart
+                        </button>
+                        <button class="order-qty">
+                            <div>
+                                <img
+                                    src="assets/images/icon-increment-quantity.svg"
+                                    alt="add-item-to-cart-btn"
+                                    id="add-item"
+                                />
+                            </div>
+                            <p id="number-of-items">4</p>
+                            <div>
+                                <img
+                                    src="assets/images/icon-decrement-quantity.svg"
+                                    alt="remove-item-from-cart-btn"
+                                    id="remove-item"
+                                />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="desc">
+                        <p id="category" class="category">Waffle</p>
+                        <p id="product" class="product">
+                            <strong>Waffle with Berries</strong>
+                        </p>
+                        <p id="price" class="price">6.50</p>
+                    </div>
+                </div>
+            </section>
+            <section id="checkout" class="checkout">
+                <h2><strong>your cart (7)</strong></h2>
+
+                <div class="order">
+                    <div>
+                        <p><strong>Waffle with Berries</strong></p>
+                        <p>
+                            <strong
+                                ><span id="order-qty" class="order-qty"
+                                    >7x</span
+                                ></strong
+                            >
+                            <span id="price-per-order" class="price-per-order"
+                                >@ $7.00</span
+                            >
+                            <strong
+                                ><span
+                                    id="order-price-total"
+                                    class="order-price-total"
+                                    >$7.00</span
+                                ></strong
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                            src="assets/images/icon-remove-item.svg"
+                            alt="remove-item"
+                        />
+                    </div>
+                </div>
+
+                <div id="total" class="total">
+                    <p>Order Total</p>
+                    <strong
+                        ><span id="order-total" class="order-total"
+                            >$7.00</span
+                        ></strong
+                    >
+                </div>
+
+                <p class="checkout-msg">
+                    <img
+                        src="assets/images/icon-carbon-neutral.svg"
+                        alt="carbon-neutral-icon"
+                    />
+                    This is a <strong>carbon-neutral</strong> delivery
+                </p>
+                <button>confirm order</button>
+            </section>
+            <section id="order-confirmed" class="hidden order-confirmed">
+                <img
+                    src="assets/images/icon-order-confirmed.svg"
+                    alt="order-confirmed"
+                />
+                <h2>order confirmed</h2>
+                <p class="order-msg">We hope you enjoy your food!</p>
+
+                <div class="order">
+                    <div class="product-info">
+                        <div>
+                            <img
+                                src="assets/images/image-waffle-thumbnail.jpg"
+                                alt="image-waffle-thumbnail"
+                            />
+                        </div>
+                        <div class="checkout-items">
+                            <p><strong>Waffle with Berries</strong></p>
+                            <p>
+                                <strong
+                                    ><span id="order-qty" class="order-qty"
+                                        >7x</span
+                                    ></strong
+                                >
+                                <span
+                                    id="price-per-order"
+                                    class="price-per-order"
+                                    >@ $7.00</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <strong
+                        ><span id="order-price-total" class="order-price-total"
+                            >$7.00</span
+                        ></strong
+                    >
+                </div>
+
+                <div id="total" class="total">
+                    <p>Order Total</p>
+                    <strong
+                        ><span id="order-total" class="order-total"
+                            >$7.00</span
+                        ></strong
+                    >
+                </div>
+                <button>start new order</button>
+            </section>
+        </main>
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >
+                Coded by
+                <a
+                    href="
+https://savion-dev.vercel.app"
+                    >Savion</a
+                >
+            </div>
+        </footer>
+    </body>
+</html>
