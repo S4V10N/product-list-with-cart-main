@@ -18,7 +18,8 @@
         </header>
 
         <main>
-            <section class="products">
+<article>
+                <section class="products">
                 <div id="box" class="box">
                     <div>
                         <img
@@ -135,6 +136,46 @@
                         </p>
                         <p id="price" class="price">6.50</p>
                     </div>
+                </div>
+                <div id="box" class="box">
+                    <div>
+                        <img
+                            src="assets/images/image-waffle-mobile.jpg"
+                            alt="alt-text"
+                        />
+                        <button class="cart">
+                            <img
+                                src="assets/images/icon-add-to-cart.svg"
+                                alt="cart-icon"
+                            />
+                            Add to Cart
+                        </button>
+                        <button class="order-qty">
+                            <div>
+                                <img
+                                    src="assets/images/icon-increment-quantity.svg"
+                                    alt="add-item-to-cart-btn"
+                                    id="add-item"
+                                />
+                            </div>
+                            <p id="number-of-items">4</p>
+                            <div>
+                                <img
+                                    src="assets/images/icon-decrement-quantity.svg"
+                                    alt="remove-item-from-cart-btn"
+                                    id="remove-item"
+                                />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="desc">
+                        <p id="category" class="category">Waffle</p>
+                        <p id="product" class="product">
+                            <strong>Waffle with Berries</strong>
+                        </p>
+                        <p id="price" class="price">6.50</p>
+                    </div>
+                </div>
                 </div>
                 <div id="box" class="box">
                     <div>
@@ -177,9 +218,14 @@
                 </div>
             </section>
             <section id="checkout" class="checkout">
-                <h2><strong>your cart (7)</strong></h2>
+                <h2><strong>your cart (<span class="order-q">0</span>)</strong></h2>
+<div class="if-empty">
+    <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart">
 
-                <div class="order">
+    <p>Your added items will appear here</p>
+</div>
+<div class="if-not-empty">
+                    <div class="order">
                     <div>
                         <p><strong>Waffle with Berries</strong></p>
                         <p>
@@ -206,7 +252,7 @@
                             alt="remove-item"
                         />
                     </div>
-                </div>
+                </div> 
 
                 <div id="total" class="total">
                     <p>Order Total</p>
@@ -225,8 +271,10 @@
                     This is a <strong>carbon-neutral</strong> delivery
                 </p>
                 <button>confirm order</button>
+</div>
             </section>
-            <section id="order-confirmed" class="hidden order-confirmed">
+</article>
+            <section id="order-confirmed" class="hidden order-confirmed ">
                 <img
                     src="assets/images/icon-order-confirmed.svg"
                     alt="order-confirmed"

@@ -12,6 +12,10 @@ header
         margin-bottom: 3rem
         padding-left: 2rem
 
+.if-not-empty
+    display: none
+.selected
+    border: 2px solid var.$RED
 .products
     padding: 0 2rem
     #box
@@ -43,6 +47,8 @@ header
                 border: 0.1rem solid var.$PRODUCT-HIGHLIGHT-LIGHT
                 border-radius: 3rem
                 gap: 0.5rem
+                &:active, &:hover
+                    border: 2px solid var.$PRODUCT-HIGHLIGHT-LIGHT
                 img
                     margin: 0
                     width: 2.5rem
@@ -62,9 +68,17 @@ header
                     place-content: center
                     border: 0.1rem solid var.$BG-COLOR
                     border-radius: 50%
+                    margin: 0
                     cursor: pointer
+                    transition: 1s ease
+                    &:hover , &:active
+                        background-color: var.$BG-COLOR
+                        img
+                            filter: invert(24%) sepia(91%) saturate(3419%) hue-rotate(358deg) brightness(50%) contrast(93%)
                     img
+                        transition: 1s ease
                         width: 1.5rem
+
         .desc
             margin-bottom: 2rem
         .category
@@ -80,8 +94,11 @@ header
                 padding-right: 0.2rem
 .checkout
     max-width: 45rem
+    transition: 1s ease-in-out
     background-color: var.$BG-COLOR
     display: flex
+    width: 100%
+    margin: auto
     align-items: center
     padding: 3rem 4rem 6rem 4rem
     flex-direction: column
@@ -90,6 +107,14 @@ header
         text-transform: capitalize
         color: var.$RED
         margin-bottom: 1.5rem
+
+    .if-empty
+        display: flex
+        align-items: center
+        gap: 1.5rem
+        color: var.$PRODUCT-HIGHLIGHT-DARK
+        font-weight: var.$BOLD-TEXT
+        flex-direction: column
     .order
         @extend .checkout
         padding: 0
@@ -105,8 +130,14 @@ header
             display: grid
             place-content: center
             cursor: pointer
+            transition: 1s ease
+            &:hover, &:hover
+                border: 2px solid var.$HEADER-TEXT
+                img
+                    filter: invert(24%) sepia(91%) saturate(3419%) hue-rotate(358deg) brightness(20%) contrast(93%)
         img
             width: 1.5rem
+            transition: 1s ease
         div:has(p)
             .order-qty
                 color: var.$RED
@@ -148,7 +179,11 @@ header
         font-size: 2rem
         text-transform: capitalize
         font-weight: var.$BOLD-TEXT
-        border-radius: 3rem
+        cursor: pointer
+        transition: 1s ease
+        border-radius: 4rem
+        &:hover, &:active
+            background-color: var.$HEADER-TEXT
 
 .order-confirmed
     @extend .checkout
@@ -176,6 +211,10 @@ header
             width: 6rem
             border: none
             height: 100%
+            &:hover , &:active
+                border: none
+                img
+                    filter: none
             img
                 width: 100%
                 border-radius: 0.4rem
@@ -210,5 +249,55 @@ header
     color: var.$RED
 main
     margin-bottom: 3rem
+    display: flex
+    align-items: center
+    flex-direction: column
+    min-width: 100%
 .hidden
     display: none
+
+@media (min-width: 600px)
+    article
+        width: 100%
+    .products
+        width: 100%
+        place-items: center
+        display: grid
+        max-width: 93rem
+        grid-template-columns: repeat(auto-fit,minmax(28rem, 1fr))
+        #box
+            div
+                img
+                    max-width: 28rem
+                    height: 28rem
+    .checkout
+        border-radius: 1rem
+@media (min-width: 1440px)
+    body
+        background-color: var.$BG-COLOR
+    header
+        h1
+            max-width: max-content
+            padding-left: calc( ((100% - 138rem) / 2) + 1rem)
+    article
+        max-width: calc( 93rem + 45rem )
+        display: flex
+        align-items: start
+        .products
+            padding: 0
+        .checkout
+
+            padding-top: 0
+            margin: 0
+            button
+                width: 100%
+            h2
+                transform: translateY(-4.5rem)
+                font-size: 3.5rem
+                margin-bottom: -2rem
+    .order-confirmed
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        border-radius: 1rem
