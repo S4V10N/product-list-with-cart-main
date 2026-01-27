@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -10,6 +10,7 @@
             href="./assets/images/favicon-32x32.png"
         />
         <link rel="stylesheet" href="dist/styles.css" />
+        <script src="app.js" defer></script>
         <title>Frontend Mentor | Product list with cart</title>
     </head>
     <body>
@@ -18,263 +19,75 @@
         </header>
 
         <main>
-<article>
-                <section class="products">
-                <div id="box" class="box">
-                    <div>
+            <article>
+                <section class="products" id="products"></section>
+                <section id="checkout" class="checkout">
+                    <h2>
+                        <strong
+                            >your cart (<span class="order-q">0</span>)</strong
+                        >
+                    </h2>
+                    <div class="if-empty">
                         <img
-                            src="assets/images/image-waffle-mobile.jpg"
-                            alt="alt-text"
+                            src="assets/images/illustration-empty-cart.svg"
+                            alt="empty-cart"
                         />
-                        <button class="cart">
-                            <img
-                                src="assets/images/icon-add-to-cart.svg"
-                                alt="cart-icon"
-                            />
-                            Add to Cart
-                        </button>
-                        <button class="order-qty">
-                            <div>
-                                <img
-                                    src="assets/images/icon-increment-quantity.svg"
-                                    alt="add-item-to-cart-btn"
-                                    id="add-item"
-                                />
-                            </div>
-                            <p id="number-of-items">4</p>
-                            <div>
-                                <img
-                                    src="assets/images/icon-decrement-quantity.svg"
-                                    alt="remove-item-from-cart-btn"
-                                    id="remove-item"
-                                />
-                            </div>
-                        </button>
-                    </div>
-                    <div class="desc">
-                        <p id="category" class="category">Waffle</p>
-                        <p id="product" class="product">
-                            <strong>Waffle with Berries</strong>
-                        </p>
-                        <p id="price" class="price">6.50</p>
-                    </div>
-                </div>
-                <div id="box" class="box">
-                    <div>
-                        <img
-                            src="assets/images/image-waffle-mobile.jpg"
-                            alt="alt-text"
-                        />
-                        <button class="cart">
-                            <img
-                                src="assets/images/icon-add-to-cart.svg"
-                                alt="cart-icon"
-                            />
-                            Add to Cart
-                        </button>
-                        <button class="order-qty">
-                            <div>
-                                <img
-                                    src="assets/images/icon-increment-quantity.svg"
-                                    alt="add-item-to-cart-btn"
-                                    id="add-item"
-                                />
-                            </div>
-                            <p id="number-of-items">4</p>
-                            <div>
-                                <img
-                                    src="assets/images/icon-decrement-quantity.svg"
-                                    alt="remove-item-from-cart-btn"
-                                    id="remove-item"
-                                />
-                            </div>
-                        </button>
-                    </div>
-                    <div class="desc">
-                        <p id="category" class="category">Waffle</p>
-                        <p id="product" class="product">
-                            <strong>Waffle with Berries</strong>
-                        </p>
-                        <p id="price" class="price">6.50</p>
-                    </div>
-                </div>
-                <div id="box" class="box">
-                    <div>
-                        <img
-                            src="assets/images/image-waffle-mobile.jpg"
-                            alt="alt-text"
-                        />
-                        <button class="cart">
-                            <img
-                                src="assets/images/icon-add-to-cart.svg"
-                                alt="cart-icon"
-                            />
-                            Add to Cart
-                        </button>
-                        <button class="order-qty">
-                            <div>
-                                <img
-                                    src="assets/images/icon-increment-quantity.svg"
-                                    alt="add-item-to-cart-btn"
-                                    id="add-item"
-                                />
-                            </div>
-                            <p id="number-of-items">4</p>
-                            <div>
-                                <img
-                                    src="assets/images/icon-decrement-quantity.svg"
-                                    alt="remove-item-from-cart-btn"
-                                    id="remove-item"
-                                />
-                            </div>
-                        </button>
-                    </div>
-                    <div class="desc">
-                        <p id="category" class="category">Waffle</p>
-                        <p id="product" class="product">
-                            <strong>Waffle with Berries</strong>
-                        </p>
-                        <p id="price" class="price">6.50</p>
-                    </div>
-                </div>
-                <div id="box" class="box">
-                    <div>
-                        <img
-                            src="assets/images/image-waffle-mobile.jpg"
-                            alt="alt-text"
-                        />
-                        <button class="cart">
-                            <img
-                                src="assets/images/icon-add-to-cart.svg"
-                                alt="cart-icon"
-                            />
-                            Add to Cart
-                        </button>
-                        <button class="order-qty">
-                            <div>
-                                <img
-                                    src="assets/images/icon-increment-quantity.svg"
-                                    alt="add-item-to-cart-btn"
-                                    id="add-item"
-                                />
-                            </div>
-                            <p id="number-of-items">4</p>
-                            <div>
-                                <img
-                                    src="assets/images/icon-decrement-quantity.svg"
-                                    alt="remove-item-from-cart-btn"
-                                    id="remove-item"
-                                />
-                            </div>
-                        </button>
-                    </div>
-                    <div class="desc">
-                        <p id="category" class="category">Waffle</p>
-                        <p id="product" class="product">
-                            <strong>Waffle with Berries</strong>
-                        </p>
-                        <p id="price" class="price">6.50</p>
-                    </div>
-                </div>
-                </div>
-                <div id="box" class="box">
-                    <div>
-                        <img
-                            src="assets/images/image-waffle-mobile.jpg"
-                            alt="alt-text"
-                        />
-                        <button class="cart">
-                            <img
-                                src="assets/images/icon-add-to-cart.svg"
-                                alt="cart-icon"
-                            />
-                            Add to Cart
-                        </button>
-                        <button class="order-qty">
-                            <div>
-                                <img
-                                    src="assets/images/icon-increment-quantity.svg"
-                                    alt="add-item-to-cart-btn"
-                                    id="add-item"
-                                />
-                            </div>
-                            <p id="number-of-items">4</p>
-                            <div>
-                                <img
-                                    src="assets/images/icon-decrement-quantity.svg"
-                                    alt="remove-item-from-cart-btn"
-                                    id="remove-item"
-                                />
-                            </div>
-                        </button>
-                    </div>
-                    <div class="desc">
-                        <p id="category" class="category">Waffle</p>
-                        <p id="product" class="product">
-                            <strong>Waffle with Berries</strong>
-                        </p>
-                        <p id="price" class="price">6.50</p>
-                    </div>
-                </div>
-            </section>
-            <section id="checkout" class="checkout">
-                <h2><strong>your cart (<span class="order-q">0</span>)</strong></h2>
-<div class="if-empty">
-    <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart">
 
-    <p>Your added items will appear here</p>
-</div>
-<div class="if-not-empty">
-                    <div class="order">
-                    <div>
-                        <p><strong>Waffle with Berries</strong></p>
-                        <p>
+                        <p>Your added items will appear here</p>
+                    </div>
+                    <div class="if-not-empty">
+                        <div class="order">
+                            <div>
+                                <p><strong>Waffle with Berries</strong></p>
+                                <p>
+                                    <strong
+                                        ><span id="order-qty" class="order-qty"
+                                            >7x</span
+                                        ></strong
+                                    >
+                                    <span
+                                        id="price-per-order"
+                                        class="price-per-order"
+                                        >@ $7.00</span
+                                    >
+                                    <strong
+                                        ><span
+                                            id="order-price-total"
+                                            class="order-price-total"
+                                            >$7.00</span
+                                        ></strong
+                                    >
+                                </p>
+                            </div>
+                            <div>
+                                <img
+                                    src="assets/images/icon-remove-item.svg"
+                                    alt="remove-item"
+                                />
+                            </div>
+                        </div>
+
+                        <div id="total" class="total">
+                            <p>Order Total</p>
                             <strong
-                                ><span id="order-qty" class="order-qty"
-                                    >7x</span
-                                ></strong
-                            >
-                            <span id="price-per-order" class="price-per-order"
-                                >@ $7.00</span
-                            >
-                            <strong
-                                ><span
-                                    id="order-price-total"
-                                    class="order-price-total"
+                                ><span id="order-total" class="order-total"
                                     >$7.00</span
                                 ></strong
                             >
+                        </div>
+
+                        <p class="checkout-msg">
+                            <img
+                                src="assets/images/icon-carbon-neutral.svg"
+                                alt="carbon-neutral-icon"
+                            />
+                            This is a <strong>carbon-neutral</strong> delivery
                         </p>
+                        <button>confirm order</button>
                     </div>
-                    <div>
-                        <img
-                            src="assets/images/icon-remove-item.svg"
-                            alt="remove-item"
-                        />
-                    </div>
-                </div> 
-
-                <div id="total" class="total">
-                    <p>Order Total</p>
-                    <strong
-                        ><span id="order-total" class="order-total"
-                            >$7.00</span
-                        ></strong
-                    >
-                </div>
-
-                <p class="checkout-msg">
-                    <img
-                        src="assets/images/icon-carbon-neutral.svg"
-                        alt="carbon-neutral-icon"
-                    />
-                    This is a <strong>carbon-neutral</strong> delivery
-                </p>
-                <button>confirm order</button>
-</div>
-            </section>
-</article>
-            <section id="order-confirmed" class="hidden order-confirmed ">
+                </section>
+            </article>
+            <section id="order-confirmed" class="hidden order-confirmed">
                 <img
                     src="assets/images/icon-order-confirmed.svg"
                     alt="order-confirmed"
