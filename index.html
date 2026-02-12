@@ -35,45 +35,17 @@
 
                         <p>Your added items will appear here</p>
                     </div>
-                    <div class="if-not-empty">
-                        <div class="order">
-                            <div>
-                                <p><strong>Waffle with Berries</strong></p>
-                                <p>
-                                    <strong
-                                        ><span id="order-qty" class="order-qty"
-                                            >7x</span
-                                        ></strong
-                                    >
-                                    <span
-                                        id="price-per-order"
-                                        class="price-per-order"
-                                        >@ $7.00</span
-                                    >
-                                    <strong
-                                        ><span
-                                            id="order-price-total"
-                                            class="order-price-total"
-                                            >$7.00</span
-                                        ></strong
-                                    >
-                                </p>
-                            </div>
-                            <div>
-                                <img
-                                    src="assets/images/icon-remove-item.svg"
-                                    alt="remove-item"
-                                />
-                            </div>
-                        </div>
+                    <div class="if-not-empty hidden">
+                        <div class="order-box"></div>
 
                         <div id="total" class="total">
                             <p>Order Total</p>
                             <strong
-                                ><span id="order-total" class="order-total"
-                                    >$7.00</span
-                                ></strong
-                            >
+                                ><span
+                                    id="order-total"
+                                    class="order-total"
+                                ></span
+                            ></strong>
                         </div>
 
                         <p class="checkout-msg">
@@ -83,11 +55,11 @@
                             />
                             This is a <strong>carbon-neutral</strong> delivery
                         </p>
-                        <button>confirm order</button>
+                        <button id="confirm-order">confirm order</button>
                     </div>
                 </section>
             </article>
-            <section id="order-confirmed" class="hidden order-confirmed">
+            <section id="order-confirmed" class="order-confirmed hidden">
                 <img
                     src="assets/images/icon-order-confirmed.svg"
                     alt="order-confirmed"
@@ -95,46 +67,17 @@
                 <h2>order confirmed</h2>
                 <p class="order-msg">We hope you enjoy your food!</p>
 
-                <div class="order">
-                    <div class="product-info">
-                        <div>
-                            <img
-                                src="assets/images/image-waffle-thumbnail.jpg"
-                                alt="image-waffle-thumbnail"
-                            />
-                        </div>
-                        <div class="checkout-items">
-                            <p><strong>Waffle with Berries</strong></p>
-                            <p>
-                                <strong
-                                    ><span id="order-qty" class="order-qty"
-                                        >7x</span
-                                    ></strong
-                                >
-                                <span
-                                    id="price-per-order"
-                                    class="price-per-order"
-                                    >@ $7.00</span
-                                >
-                            </p>
-                        </div>
-                    </div>
-                    <strong
-                        ><span id="order-price-total" class="order-price-total"
-                            >$7.00</span
-                        ></strong
-                    >
-                </div>
+                <div class="order-highlight">
+                    <div class="order cell"></div>
 
-                <div id="total" class="total">
-                    <p>Order Total</p>
-                    <strong
-                        ><span id="order-total" class="order-total"
-                            >$7.00</span
-                        ></strong
-                    >
+                    <div id="total" class="total">
+                        <p>Order Total</p>
+                        <strong
+                            ><span id="order-total" class="order-total"></span
+                        ></strong>
+                    </div>
                 </div>
-                <button>start new order</button>
+                <button id="new-order">start new order</button>
             </section>
         </main>
         <footer>

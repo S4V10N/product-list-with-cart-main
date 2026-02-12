@@ -2,7 +2,7 @@
 @forward 'globals'
 
 body
-    background-color: var.$PRODUCT-BG
+    background-color: var.$BG-COLOR
     padding: 3rem 0
 
 header
@@ -15,8 +15,6 @@ header
 .under
     z-index: 2
 
-.if-not-empty
-    display: none
 .selected
     border: 2px solid var.$RED
 .products
@@ -25,6 +23,7 @@ header
     #box
 
         max-width: 40rem
+        margin-bottom: 1rem
         div
             margin-bottom: 3rem
             position: relative
@@ -111,13 +110,6 @@ header
         color: var.$RED
         margin-bottom: 1.5rem
 
-    .if-empty
-        display: flex
-        align-items: center
-        gap: 1.5rem
-        color: var.$PRODUCT-HIGHLIGHT-DARK
-        font-weight: var.$BOLD-TEXT
-        flex-direction: column
     .order
         @extend .checkout
         padding: 0
@@ -189,14 +181,36 @@ header
             background-color: var.$HEADER-TEXT
 
 .order-confirmed
-    @extend .checkout
-    padding: 3rem 2rem 6rem 2rem
+    padding: 3rem 2rem 3rem 2rem
+    width: 100%
+    max-width: 45rem
     border-radius: 1rem 1rem 0 0
+    position: sticky
+    z-index: 99
+    bottom: 0
+    background-color: var.$BG-COLOR
+
+    .order-highlight
+        background-color: var.$PRODUCT-BG
+        padding: 2.5rem
+        margin-bottom: 3rem
+
+        border-radius: 1rem
+        .total
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font-weight: var.$BOLD-TEXT
+                color: var.$PRODUCT-HIGHLIGHT-LIGHT
+            strong
+                font-size: 3rem
     img
         align-self: flex-start
         margin-bottom: 2rem
     h2
-        font-size: 4rem
+        font-size: 4.8rem
+        width: 25rem
         margin-bottom: 0.5rem
         color: var.$HEADER-TEXT
     .order-msg
@@ -208,20 +222,31 @@ header
         margin: 0
     .order
         justify-content: space-between
-        padding: 0 2rem
-
+        padding: 0
         div:has(img)
             width: 6rem
             border: none
-            height: 100%
             &:hover , &:active
-                border: none
                 img
                     filter: none
             img
                 width: 100%
                 border-radius: 0.4rem
                 height: 100%
+        .confirmed-item
+            display: flex
+            width: 100%
+            justify-content: space-between
+            border-bottom: 2px solid var.$PRODUCT-TEXT
+            padding-bottom: 1rem
+            align-items: center
+            margin-bottom: 1rem
+            .checkout-items p:nth-of-type(2)
+                color: var.$PRODUCT-HIGHLIGHT-DARK
+                .order-qty
+                    color: var.$RED
+                .price-per-order
+                    color: var.$PRODUCT-HIGHLIGHT-LIGHT
         strong
             font-size: 1.8rem
         .product-info
@@ -230,10 +255,20 @@ header
             align-items: center
         .checkout-items
             margin-left: 1.5rem
-        .order-total
-            font-size: 3rem
     button
         width: 100%
+        background-color: var.$RED
+        border: none
+        color: var.$BG-COLOR
+        padding: 2rem 7rem
+        font-size: 2rem
+        text-transform: capitalize
+        font-weight: var.$BOLD-TEXT
+        cursor: pointer
+        transition: 1s ease
+        border-radius: 4rem
+        &:hover, &:active
+            background-color: var.$HEADER-TEXT
 
 .attribution
     font-size: 1.5rem
@@ -256,8 +291,24 @@ main
     align-items: center
     flex-direction: column
     min-width: 100%
+
+.if-empty
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    color: var.$PRODUCT-HIGHLIGHT-DARK
+    font-weight: var.$BOLD-TEXT
+    flex-direction: column
+
+.if-not-empty
+    width: 100%
+    .total
+        padding: 0
 .hidden
     display: none
+
+.cell
+    flex-direction: column
 
 @media (min-width: 600px)
     article
@@ -275,6 +326,12 @@ main
                     height: 28rem
     .checkout
         border-radius: 1rem
+        padding: 3rem
+        .order
+            padding: 0
+
+    .order-confirmed
+        border-radius: 1rem
 @media (min-width: 1440px)
     body
         background-color: var.$BG-COLOR
@@ -289,9 +346,12 @@ main
         .products
             padding: 0
         .checkout
-
+            position: sticky
+            top: 5rem
             padding-top: 0
             margin: 0
+            .order
+                margin-bottom: 1rem
             button
                 width: 100%
             h2
@@ -299,8 +359,13 @@ main
                 font-size: 3.5rem
                 margin-bottom: -2rem
     .order-confirmed
+        height: fit-content
         position: absolute
         top: 50%
+        padding: 3rem
         left: 50%
         transform: translateX(-50%) translateY(-50%)
-        border-radius: 1rem
+    .order-box
+        display: flex
+        flex-direction: column
+        gap: 2rem
