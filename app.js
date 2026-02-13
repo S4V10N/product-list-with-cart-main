@@ -54,10 +54,12 @@ async function getProduct() {
     const cartBtn = document.querySelectorAll(".cart");
     cartBtn.forEach((cart) => {
         cart.classList.add("under");
+
         cart.addEventListener("click", () => cart.classList.remove("under"));
     });
 
     itemOrder();
+    console.log(borderBox);
 }
 
 getProduct();
@@ -181,6 +183,7 @@ const updateOrderBox = (name, price, qty, countEl, thumbnail) => {
         });
         document.querySelector("#new-order").addEventListener("click", () => {
             orderConfirmedMsg.classList.add("hidden");
+            document.body.classList.remove("stop");
             countEl.innerText = 0;
             const box = countEl.closest(".box");
             const cartBtn = box.querySelector(".cart");
@@ -224,4 +227,5 @@ const updateOrderBox = (name, price, qty, countEl, thumbnail) => {
 
 document.querySelector("#confirm-order").addEventListener("click", () => {
     orderConfirmedMsg.classList.remove("hidden");
+    document.body.classList.add("stop");
 });
