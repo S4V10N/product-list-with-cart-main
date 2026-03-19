@@ -201,7 +201,6 @@ const updateOrderBox = (name, price, qty, countEl, thumbnail) => {
         existingConfirmed.querySelector(".order-price-total").innerText =
             `$${(qty * price).toFixed(2)}`;
     } else {
-        orderConfirmed.innerHTML = "";
         const confirmedEl = document.createElement("div");
         confirmedEl.classList.add("confirmed-item");
         confirmedEl.dataset.order = name;
