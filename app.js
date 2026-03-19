@@ -152,6 +152,7 @@ const updateOrderBox = (name, price, qty, countEl, thumbnail) => {
             `$${(qty * price).toFixed(2)}`;
     } else {
         const orderEl = document.createElement("div");
+        orderEl.innerHTML = "";
         orderEl.classList.add("order");
         orderEl.dataset.order = name;
 
