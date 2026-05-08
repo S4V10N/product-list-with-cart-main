@@ -184,10 +184,12 @@ const updateOrderBox = (name, price, qty, countEl, thumbnail) => {
         document.querySelector("#new-order").addEventListener("click", () => {
             orderConfirmedMsg.classList.add("hidden");
             document.body.classList.remove("stop");
+            orderEl.innerHTML = "";
             countEl.innerText = 0;
             const box = countEl.closest(".box");
             const cartBtn = box.querySelector(".cart");
             if (cartBtn) cartBtn.classList.add("under");
+            orderConfirmed.innerHTML = "";
             updateCheckoutState();
         });
 
